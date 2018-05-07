@@ -25,7 +25,7 @@ body { padding: 0; margin: 0 }
   animation: walk 10s steps(1000) infinite forwards,dissapear 0s steps(1) 16s infinite forwards;
 }
 .coinsjump {
-  animation: coin 1s steps(1000) 1 forwards;
+  animation: coin 1s steps(1000) 3 forwards, disappear 0s steps(1) 4s infinite forwards;
 }
 @keyframes move {
   100% { background-position: -1680px 0px; }
@@ -333,3 +333,4 @@ margin-right: 0px;
   bottom: 113px;
   right: 600px;
 }
+
