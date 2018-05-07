@@ -1,0 +1,335 @@
+* { box-sizing: border-box;}
+body { padding: 0; margin: 0 }
+.suelo {animation: move 10s steps(1000) infinite forwards;
+}
+.enemigo {
+  animation: walk 15s steps(1000) infinite forwards, disappear 0s steps(1) 16s infinite forwards;
+
+}
+.enemigo1{
+  animation: walk 20s steps(1000) infinite forwards, disappear 0s steps(1) 16s infinite forwards;
+}
+.small-cloud {
+  animation: slide-left 5s steps(1000) infinite forwards,down-up 6s steps(1000) infinite forwards;
+
+}
+
+.nube-grande {
+  animation: slide-right 10s steps(1000) infinite forwards, down-up 5s steps(1000) infinite forwards;
+}
+
+.mas-cloud{
+  animation: slide-left 10s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;
+}
+.pato {
+  animation: walk 10s steps(1000) infinite forwards,dissapear 0s steps(1) 16s infinite forwards;
+}
+.coinsjump {
+  animation: coin 1s steps(1000) 1 forwards;
+}
+@keyframes move {
+  100% { background-position: -1680px 0px; }
+
+}
+@keyframes walk {
+  100% { margin-left: 2048px;  }
+
+}
+@-webkit-keyframes coin {
+  0% {bottom:300px;}50% {bottom:390px;}100% {bottom:300px;
+    }}
+@keyframes mario {
+  0% {bottom:102; left: 0px;}
+  30% {bottom:102px; left:490px;}
+  35% {bottom: 210px; left: 490px;}
+  40% {bottom: 102px; left: 490px;}
+  100% {bottom: 102px; left: 110vw;}
+
+}
+@keyframes jump {
+ 50% {bottom: 220px;}
+ 100% {bottom:113px;}
+}
+@keyframes slide-left {
+  100% { margin-right: 100vw;}
+}
+@keyframes down-up {
+  50% { margin-top: 200px;}
+  100% { margin-top: 0px;}
+
+}
+@keyframes slide-right {
+  100% {margin-left:100vw;}
+
+}
+@keyframes aparece-izquierda {
+    from {
+         transform: translateX(-20vw);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1; visibility: visible;
+  }
+  to {
+    opacity: 0; visibility: hidden;
+  }
+}
+.suelo {
+background-image: url("ground.png");
+width:100%;
+height: 113px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+.coins {
+  background-image: url("coins.png");
+  position: absolute;
+  bottom: 300px;
+  left: 200px;
+  height: 57px;
+  width: 199px;
+}
+.coins2 {
+  background-image: url("coins.png");
+  position: absolute;
+  bottom: 250px;
+  left: 200px;
+  height: 57px;
+  width: 199px;
+}
+
+.coins-derecha1 {
+  background-image: url("coins.png");
+  position: absolute;
+  bottom: 300px;
+  left: 1350px;
+  height: 57px;
+  width: 199px;
+}
+.coins-derecha2 {
+  background-image: url("coins.png");
+  position: absolute;
+  bottom: 250px;
+  left: 1350px;
+  height: 57px;
+  width: 199px;
+}
+
+.coinsjump{
+  background-image: url("coinjump.png");
+  position: absolute;
+  left: 500px;
+  width: 83px;;
+  height: 60px;
+  bottom: 300px;
+  z-index: 10;
+
+}
+
+
+.pato {
+  background-image: url("pato.gif");
+  width: 67px;
+  height: 89px;
+  bottom: 103px;
+  position: absolute;
+  z-index: 7;
+}
+
+.mario-name {
+  background-image: url("marioname.png");
+  position: absolute;
+  left:100px;
+  top: 10px;
+  width: 97px;
+  height:32px;
+
+}
+
+.coin {
+  background-image: url("coin.png");
+  position: absolute;
+  top: 10px;
+  left:500px;
+  width: 107px;
+  height: 37px;
+}
+.worldlevel {
+  background-image: url("worldlevel.png");
+  position: absolute;
+  left: 800px;
+  top: 10px;
+  width: 118px;
+  height: 45px;
+
+}
+.time {
+  background-image: url("time.png");
+  position: absolute;
+  left:1300px;
+  top:10px;
+  width: 107px;
+  height: 49px;
+
+}
+
+.enemigo {
+  background-image: url("enemy1.png");
+  width: 75px;
+  height:75px;
+  position: absolute;
+  bottom: 112px;
+  left: 0;
+  z-index: 7;
+}
+
+body {
+  background-image: url("mariofondo.gif");
+  overflow: hidden;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+.small-cloud {
+background-image: url("small-cloud.png");
+width:204px;
+height: 156px;
+top: 0;
+right: 0;
+position: absolute;
+margin-right: 0px;
+}
+.mas-cloud {
+background-image: url("small-cloud.png");
+width:204px;
+height: 156px;
+top: 0;
+right: 0;
+position: absolute;
+margin-right: 0px;
+}
+
+.nube-grande{
+  background-image: url("big-cloud.png");
+  width: 301px;
+  height: 113px;
+  top: 0;
+  right: 1  ;
+  position: absolute;
+  margin-left: 0px;
+}
+.stone-block {
+  background-image: url("stone-block.png");
+  width: 75px;
+  height: 75px;
+  bottom: 299px;
+  position: absolute;
+  }
+
+  .stone-block-izquierda {
+    left:700px;
+    }
+
+.stone-block-medio-izquierda {
+  left:775px;
+  }
+
+
+
+.stone-block-medio-derecha{
+  left: 850px;
+
+}
+.stone-block-derecha {
+  left:925px;
+}
+
+
+.question-block {
+  background-image: url("question-block.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+}
+.question-block-abajo-derecha{
+  bottom: 298px;
+  left: 1000px;
+
+}
+.question-block-abajo-izquierda{
+  bottom: 298px;
+  left: 625px;
+}
+.question-block-izquierda-primero {
+    bottom: 298px;
+  left: 500px;
+  z-index: 8;
+}
+.question-block-derecha-ultimo{
+  bottom: 298px;
+  left: 1200px;
+}
+.big-pipe {
+  background-image: url("double-pipe.png");
+  width:207px;
+  height: 207px;
+  position: absolute;
+  bottom: 110px;
+  right: 0px;
+  z-index: 10;
+}
+
+.mario-izquierda {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-image: url("mario.gif");
+  bottom:102px;
+  z-index: 9;
+
+}
+
+.mario-izquierda {
+  animation: mario 10s ease infinite forwards;
+}
+.question-block-arriba {
+  bottom: 500px;
+  left: 800px;
+}
+
+.big-bush {
+  background-image: url("big-bush.png");
+  position: absolute;
+  bottom: 113px;
+  width: 300px;
+  height: 75px;
+  left: 600px;
+}
+
+.enemigo1 {
+  background-image: url("enemy.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  bottom:113px;
+  z-index: 7;
+
+
+}
+
+.small-hill {
+  background-image: url("small-hill.png");
+  height: 38px;
+  width: 96px;
+  position: absolute;
+  bottom: 113px;
+  right: 600px;
+}
